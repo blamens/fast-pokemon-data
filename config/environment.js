@@ -2,12 +2,12 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'pokemon-weakness',
+    modulePrefix: 'fast-pokemon-data',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
-      FEATURES: { 
+      FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       }

@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'fast-pokemon-data',
+    modulePrefix: 'pokemon-weakness',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

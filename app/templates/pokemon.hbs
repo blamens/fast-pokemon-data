@@ -1,4 +1,9 @@
-{{pokemon-info
+{{paper-input event-enter=(action "redirectToPokemon")
+  label="Search for a pokemon.."
+  value=pokemon-info
+}}
+<div class="pokemonInfo">
+  {{pokemon-info
   name=content.name
   imageShiny=content.shinyImage
   image=content.image
@@ -9,8 +14,5 @@
   specialdefense=content.specialdefense
   speed=content.speed
 }}
+</div>
 {{outlet}}
-<!-- <button {{action "transitionToPokemons"}}>Go back to search engine!</button> -->
-{{#paper-button action="transitionToPokemons"}}
-  Go back to search engine!
-{{/paper-button}}

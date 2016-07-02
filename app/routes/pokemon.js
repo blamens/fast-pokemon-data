@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  // Services
+  favorites: Ember.inject.service(),
+  pokemonList: Ember.inject.service('pokemon-list'),
   model (params) {
     return $.get(`http://pokeapi.co/api/v2/pokemon/${params.id}`).then(raw => {
       // Here we can adjust the model we get back from the API!
@@ -18,17 +21,18 @@ export default Ember.Route.extend({
       return stats;
     });
   },
+  // Setup controller!
+  setupController(controller) {
+    this._super(...arguments);
+    controller.set('favorites', this.get('favorites.favoritePokemons'));
+    controller.set('list', this.get('pokemonList.list'));
+  },
   actions: {
-    transitionToPokemons() {
-      this.transitionTo('pokemons');
-    },
     loading() {
       return true;
     },
-    error(error) {
-      if (error) {
-        return this.transitionTo('pokemons');
-      }
+    error() {
+      this.transitionTo('pokemonnotfound');
     }
   }
 });

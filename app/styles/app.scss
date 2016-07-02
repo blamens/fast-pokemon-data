@@ -1,0 +1,81 @@
+$primary: "orange";
+$input-container-padding: 10px;
+
+@import 'ember-paper';
+
+.ember-application {
+  background: url("https://images3.alphacoders.com/273/273289.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 15px;
+}
+
+h1 {
+  color: black;
+  font-family: 'Circular', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+}
+
+h2, h3 {
+  text-align: center;
+}
+
+.favoriteButton {
+  margin-left: 7px;
+  background-color: orange;
+  padding: 4px;
+  border-color: black;
+  border-width: 2px;
+  border-style: ridge;
+}
+
+
+.md-button {
+  border: 1px;
+  background-color: orange;
+}
+
+.md-input-container {
+    padding: 5px;
+}
+th, td {
+    padding: 2px;
+    text-align: left;
+    border: 1px solid lightgray;
+    text-size: 6px;
+
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+
+  margin: 100px auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  } 50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  } 100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}

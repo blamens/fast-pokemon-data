@@ -1,0 +1,16 @@
+{{pokemon-info
+  name=content.name
+  imageShiny=content.shinyImage
+  image=content.image
+  hp=content.hp
+  attack=content.attack
+  defense=content.defense
+  specialattack=content.specialattack
+  specialdefense=content.specialdefense
+  speed=content.speed
+}}
+{{outlet}}
+<!-- <button {{action "transitionToPokemons"}}>Go back to search engine!</button> -->
+{{#paper-button action="transitionToPokemons"}}
+  Go back to search engine!
+{{/paper-button}}

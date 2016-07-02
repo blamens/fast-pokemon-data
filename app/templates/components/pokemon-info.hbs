@@ -1,0 +1,42 @@
+<!-- Name of the pokemon-->
+<h2>{{name}}</h2>
+<!-- Button to favorite the poke -->
+<!--<span class="favoriteButton" {{action 'favoriteWasClicked' name}}>
+  {{if isFavorited 'Favorite' 'Unfavorite'}}</span>-->
+
+<!-- Shiny image of the pokemon -->
+<img src={{image}} height="100px" width="100px" align="middle">
+
+<!-- Shiny image of the pokemon -->
+<img src={{imageShiny}} height="100px" width="100px" align="middle">
+
+<!-- Table with base stats -->
+<span>
+<table>
+  <tr>
+    <td>HP</td>
+    <td>{{hp}}</td>
+  </tr>
+  <tr>
+    <td>Attack</td>
+    <td>{{attack}}</td>
+  </tr>
+  <tr>
+    <td>Defense</td>
+    <td>{{defense}}</td>
+  </tr>
+  <tr>
+    <td>Special Attack</td>
+    <td>{{specialattack}}</td>
+  </tr>
+  <tr>
+    <td>Special defense</td>
+    <td>{{specialdefense}}</td>
+  </tr>
+  <tr>
+    <td>Speed</td>
+    <td>{{speed}}</td>
+  </tr>
+</table>
+</span>
+{{yield}}
